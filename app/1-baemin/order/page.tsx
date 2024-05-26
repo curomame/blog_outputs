@@ -10,7 +10,7 @@ import { BottomSheet } from "react-spring-bottom-sheet";
 
 import "react-spring-bottom-sheet/dist/style.css";
 
-export default function page() {
+export default function Page() {
   const [open, setOpen] = useState(false);
   const [letter, setLetter] = useState("");
 
@@ -43,8 +43,8 @@ export default function page() {
           //@ts-ignore
           leftFunc={() => {
             setLetter("")
-            setWriteModal(false)
             localStorage.removeItem('letter')
+            setWriteModal(false)
           }}
           right="이어 쓰기"
           //@ts-ignore
